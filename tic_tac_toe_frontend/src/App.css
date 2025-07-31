@@ -1,13 +1,13 @@
 /* CSS Variables for Theme Management */
 :root {
-  /* Theme colors */
-  --primary: #1976d2;
-  --secondary: #43a047;
-  --accent: #ef5350;
+  /* Light theme colors */
   --bg-primary: #ffffff;
   --bg-secondary: #f8f9fa;
   --text-primary: #282c34;
+  --text-secondary: #61dafb;
   --border-color: #e9ecef;
+  --button-bg: #007bff;
+  --button-text: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -26,135 +26,7 @@
   background-color: var(--bg-primary);
   color: var(--text-primary);
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.game-container {
-  padding: 20px;
-  max-width: 500px;
-  width: 100%;
-}
-
-h1 {
-  color: var(--primary);
-  margin-bottom: 20px;
-}
-
-.status {
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-  color: var(--text-primary);
-}
-
-.game-board {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.square {
-  background: var(--bg-secondary);
-  border: 2px solid var(--primary);
-  border-radius: 8px;
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 20px;
-  aspect-ratio: 1;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  color: var(--primary);
-}
-
-.square:hover:not(:disabled) {
-  background: var(--primary);
-  color: white;
-}
-
-.score-board {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 20px;
-}
-
-.score-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.player {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--primary);
-}
-
-.score {
-  background: var(--secondary);
-  color: white;
-  padding: 5px 15px;
-  border-radius: 15px;
-  font-weight: bold;
-}
-
-.game-controls {
-  margin-top: 20px;
-}
-
-.mode-buttons {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 15px;
-}
-
-.control-button {
-  background: var(--bg-secondary);
-  color: var(--primary);
-  border: 2px solid var(--primary);
-  padding: 10px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.control-button.active {
-  background: var(--primary);
-  color: white;
-}
-
-.restart-button {
-  background: var(--accent);
-  color: white;
-  border: none;
-  padding: 10px 30px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.2s ease;
-}
-
-.restart-button:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-@media (max-width: 480px) {
-  .game-container {
-    padding: 10px;
-  }
-
-  .square {
-    font-size: 1.5rem;
-    padding: 15px;
-  }
-
-  .mode-buttons {
-    flex-direction: column;
-  }
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .App-logo {
